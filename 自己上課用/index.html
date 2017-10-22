@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+    /*可上網搜尋 css reset直接複製貼上,以下是老師的寫法 或直接看老師版本的*/ 
+         /*global setting*/
+        body,h1,h2,h3,h4,h5,h6,p,ul,ol,li {
+            margin: 0;
+            padding: 0;
+        }
+        *{
+            font-family: "Montserrat";
+            box-sizing: border-box;
+        }
+        .clearfix:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        img{
+            width: 100%;
+        }
+/************************************************************/
+        
+        /*Layout*/
+        
+        .full-width{
+            width: 100%;
+        }
+        
+        
+        .fixed-width{
+            width: 1200px;
+            margin: auto;
+        }
+        
+        
+        .col-1{
+            width: 100%;
+            padding: 15px;
+        }
+        
+        
+        .col-2{
+            width: 50%;
+        }
+        
+        .col-3{
+            width: calc(100%/3);
+        }
+        
+        .col-4{
+            width: 25%;
+        }
+        
+         .col-5{
+            width: 20%;
+        }
+        
+        .col-2,.col-3,.col-4,.col-5{
+            padding: 15px;
+            float: left;
+        }
+        
+        p{
+            color: #7b7a79;
+            line-height: 2.5em;
+            font-size: 13px;
+        }
+        
+        /*****************************************/
+        /*nav */
+        nav{
+            position: fixed;
+            
+        }
+        nav .logo {
+            float: left;
+             color: #FFF;;
+        }
+        nav .col-1{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        nav .menu{
+            float: right;
+        }
+        
+        nav .menu li{
+            float: left;
+            list-style: none;
+        }
+        
+        
+        nav .menu a{
+            text-decoration: none;
+            display: block;
+            color: #FFF;
+            margin-left: 30px;
+            font-size: 14px;
+            transition: all .4s;
+        }
+        
+        nav .menu a:hover{
+            color: antiquewhite;
+        }
+        /************************************************/
+        /*header*/
+        header{
+            background-image: url(images/banner.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+/*            padding-top: 300px;*/
+/*            padding-bottom: 300px;*/
+            height: 800px;
+            color: #fff;
+            text-align: center;
+            display: table;
+            
+        }
+        header .fixed-width{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        header h1{
+            font-size: 4em;
+        }
+        
+        header p {
+            font-size: 1em;
+            color: #fff;
+        }
+        /******************************/
+        /*slogan*/
+        #slogan{
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+        #slogan h2{
+            margin-bottom: 30px;
+        }
+        
+        #slogan .fixed-width{
+            width: 760px;
+            text-align: center;
+        }
+        
+        /*********************************/
+        /*works*/
+        #works{
+            background-image: url(images/banner.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+        
+        /**************************/
+        /*service*/
+        #service{
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+        
+        #service .fixed-width:nth-of-type(1){
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        #service h2{
+            margin-bottom: 30px;
+        }
+        
+        #service h3{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        #service .col-3{
+            height: 300px;
+        }
+        
+        /*可google搜尋fontawesome及cdnjs官網搜尋font 貼連結到最上面*/
+        
+        /*********************************/
+        
+        /*BANNER*/
+        #banner{
+            padding-top: 150px;
+            padding-bottom: 150px;
+            background-color: #b9b7b5;
+            text-align: center;
+        }
+        
+        /**************************************/
+        /*about*/
+        #about{
+        padding-top: 150px;
+            padding-bottom: 150px;
+            text-align: center;
+        }        
+        
+        #about .pic{
+            height: 370px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border-radius: 50%;/*圓角 10px*/
+            transform: scale(0.8);/*等比例放大縮小*/
+            border: 15px solid green;    
+        }
+        
+        #about .fixed-width:nth-of-type(1){
+            text-align: center;
+            margin-bottom: 50px;
+            
+        }
+        
+        #about h2{
+            margin-bottom: 30px;
+        }
+        
+        /****************************/
+        /*purchase*/
+        #purchase{
+            padding-top: 150px;
+            padding-bottom: 150px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }     
+        
+        #purchase a{
+            color: white;
+        }
+        
+         #purchase h2{
+            margin-bottom: 30px;
+        }
+        
+        .btn{
+            display: inline-flex;
+            padding:10px 30px;
+            border: 1px solid white;
+        }
+        /****************************/
+        /*blog*/
+        #blog{padding-top: 150px;
+            padding-bottom: 150px;
+        }
+        #blog .fixed-width:nth-of-type(1){
+            text-align: center;
+            margin-bottom: 50px;
+            
+        }
+        
+        #blog .gallery{
+            height: 270px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+            
+        }
+        #blog .gallery img{
+            position: absolute;
+        }    
+        
+        #blog .gallery .date{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            color: white;
+            text-align: center;
+            top: 0;
+            left:0;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        
+        #blog h2{
+            margin-bottom: 20px;
+        }
+        
+        #blog .col-4 p{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        
+        #blog .col-4 a{
+        text-decoration: none;
+        color: #000;   
+        font-weight: bold;
+        }
+    </style>
+    
+</head>
+<body>
+    <nav class="full-width  ">
+        <div class="col-1 clearfix">
+            <div class="logo">AFELA</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">WORKS</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="full-width">
+        <div class="fixed-width">
+           <h1>ANAZING DESIGN</h1> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, optio.</p>
+        </div>
+    </header>
+    <div id="slogan" class="full-width">
+        <div class="fixed-width">
+            <h2>WE ARE FAMILY <br>WE ARE FAMILY TOO </h2>
+            <P> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime deserunt, repellat natus sed iusto, eligendi ratione vitae tenetur debitis omnis aliquam, quibusdam veritatis ducimus quae magni amet a enim, inventore!</P>
+        </div>
+    </div>
+    <div id="works" class="full-width"></div>
+    
+      <div id="service" class="full-wifth">
+       <div class="fixed-width">
+           <h2>BEST SERVICE</h2>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+         
+       </div> 
+       
+        <div class="fixed-width clearfix">
+            <div class="col-3">
+               <span class="fa fa-copyright fa-4x"></span>
+                <h3>COPYRIGHT</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur tempora amet dicta iusto officia deserunt exercitationem quis, optio quasi quam.</p>
+            </div>
+        
+            <div class="col-3">
+               <span class="fa fa-edit fa-4x"></span>
+                <h3>EDIT</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur tempora amet dicta iusto officia deserunt exercitationem quis, optio quasi quam.</p>
+            </div>
+            <div class="col-3">
+               <span class="fa fa-eraser fa-4x"></span>
+                <h3>ERASER</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur tempora amet dicta iusto officia deserunt exercitationem quis, optio quasi quam.</p>
+            </div>
+            <div class="col-3">
+               <span class="fa fa-eye fa-4x"></span>
+                <h3>EYE</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur tempora amet dicta iusto officia deserunt exercitationem quis, optio quasi quam.</p>
+            </div>
+            <div class="col-3">
+               <span class="fa fa-feed fa-4x"></span>
+                <h3>FEED</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur tempora amet dicta iusto officia deserunt exercitationem quis, optio quasi quam.</p>
+            </div>
+            <div class="col-3">
+               <span class="fa fa-flag fa-4x"></span>
+                <h3>FLAG</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur tempora amet dicta iusto officia deserunt exercitationem quis, optio quasi quam.</p>
+            </div>
+    </div>
+    </div>
+    
+    <div id="banner" class="full-width">
+        <div class="fixed-width">
+            <h2>TITLE</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis unde nobis minima. Pariatur unde omnis eveniet beatae ipsam sed sequi eligendi eaque labore animi maxime, ab ullam dicta, aliquid cupiditate.</p>
+        </div>
+    </div>
+       
+    <div id="about" class="full-width">
+        <div class="fixed-width">
+            <h2>ABOUT US</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis unde nobis minima. </p>
+        </div>
+        
+        <div class="fixed-width clearfix" >
+            <div class="col-3">
+            <div class="pic">
+                <img src="images/A.png" alt="">
+            </div>
+            <h3 >BANANA</h3>
+            <p>CEO</p>
+            </div>
+        
+            <div class="col-3">
+            <div class="pic">
+                <img src="images/B.jpg" alt="">
+            </div>
+            <h3 >BANANA</h3>
+            <p>CEO</p>
+            </div>
+       
+            <div class="col-3">
+            <div class="pic">
+                <img src="images/C.jpg" alt="">
+            </div>
+            <h3 >BANANA</h3>
+            <p>CEO</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="purchase" class="full-width">
+        <div class="fixed-width">
+            <h2>Are you ready to sleep?</h2>
+        <a href="#" class="btn">Sleep Now</a>
+        </div>
+    </div>
+    
+    <div id="blog" class="full-width">
+    <div class="fixed-width">
+        <h2>LATEST NEWS</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, labore.</p>
+    </div>    
+        <div class="fixed-width clearfix">
+            
+            <div class="col-4 ">
+               <div class="gallery">
+                   <img src="images/B.jpg" alt="">
+                   <div class="date">
+                       <div class="day">13</div>
+                       <div class="month">Mar</div>
+                   </div>
+                    </div> 
+                   <h3>TITLE</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut explicabo, beatae ut asperiores suscipit fugiat ipsa impedit id aliquid labore.</p>
+                   <a href="#">Read More</a>.
+            </div>
+            <div class="col-4 ">
+               <div class="gallery">
+                   <img src="images/B.jpg" alt="">
+                   <div class="date">
+                       <div class="day">13</div>
+                       <div class="month">Mar</div>
+                   </div>
+                    </div> 
+                   <h3>TITLE</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut explicabo, beatae ut asperiores suscipit fugiat ipsa impedit id aliquid labore.</p>
+                   <a href="#">Read More</a>.
+            </div>
+            <div class="col-4 ">
+               <div class="gallery">
+                   <img src="images/B.jpg" alt="">
+                   <div class="date">
+                       <div class="day">13</div>
+                       <div class="month">Mar</div>
+                   </div>
+                    </div> 
+                   <h3>TITLE</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut explicabo, beatae ut asperiores suscipit fugiat ipsa impedit id aliquid labore.</p>
+                   <a href="#">Read More</a>.
+            </div>
+            <div class="col-4 ">
+               <div class="gallery">
+                   <img src="images/B.jpg" alt="">
+                   <div class="date">
+                       <div class="day">13</div>
+                       <div class="month">Mar</div>
+                   </div>
+                    </div> 
+                   <h3>TITLE</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut explicabo, beatae ut asperiores suscipit fugiat ipsa impedit id aliquid labore.</p>
+                   <a href="#">Read More</a>.
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>
